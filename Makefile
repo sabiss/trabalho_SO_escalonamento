@@ -1,14 +1,19 @@
+TARGET = varredor
+
 CXX = g++
-CXXFLAGS = -O3 -Wall -pthread
+CXXFLAGS = -Wall -std=c++17 -O3
 
-SRC = src/main.cpp src/calcula_sequencia.cpp src/exibe_dados.cpp
-OUT = build/escalonador
+SRCS = src/main.cpp src/calcula_sequencia.cpp src/gerador_de_saida.cpp src/relogio.cpp
 
-all: $(OUT)
+OBJS = $(SRCS:.cpp=.o)
 
-$(OUT): $(SRC)
-	@mkdir -p build
-	$(CXX) $(CXXFLAGS) $(SRC) -o $(OUT)
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -rf build/escalonador
+	rm -f $(TARGET) src/*.o
