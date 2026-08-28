@@ -1,7 +1,7 @@
 #include <utility>
 #include <chrono>
-#include "calcula_sequencia.h"
-#include "relogio.h"
+#include "../include/calcula_sequencia.h"
+#include "../include/relogio.h"
 
 using ull = unsigned long long;
 

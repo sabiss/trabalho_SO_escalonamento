@@ -1,4 +1,4 @@
-#include "relogio.h"
+#include "../include/relogio.h"
 
 void Relogio::iniciar_marcacao_sequencia() {
     tempo_inicio_sequencia = std::chrono::high_resolution_clock::now();
