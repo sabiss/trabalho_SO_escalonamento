@@ -1,9 +1,13 @@
 #include <utility>
+#include <chrono>
 #include "calcula_sequencia.h"
+#include "relogio.h"
 
 using ull = unsigned long long;
 
-void calcula_sequencia(const ull& inicio_intervalo, const ull& fim_intervalo, std::pair<ull, ull>& recorde, ull QTD, const ull& limiar){
+void calcula_sequencia(const ull& inicio_intervalo, const ull& fim_intervalo, std::pair<ull, ull>& recorde, ull& QTD, const ull& limiar, double& tempo_total){
+    Relogio relogio;
+    relogio.iniciar_marcacao_sequencia();
     for(ull numero_do_intervalo = inicio_intervalo; numero_do_intervalo <= fim_intervalo; numero_do_intervalo++){
         ull numero = numero_do_intervalo;
         ull passos = 0;
@@ -28,4 +32,7 @@ void calcula_sequencia(const ull& inicio_intervalo, const ull& fim_intervalo, st
         bool precisou_mais_passos_que_o_limiar = passos > limiar;
         if(precisou_mais_passos_que_o_limiar)QTD++;
     }
+    relogio.parar_marcacao_sequencia();
+    tempo_total = relogio.calcular_tempo_total();
+
 }
