@@ -26,7 +26,7 @@ void calcula_sequencia(const ull& inicio_intervalo, const ull& fim_intervalo, st
         bool recorde_passos_ultrapassado = recorde.first < passos;
         if(recorde_passos_ultrapassado){
           recorde.first = passos;
-          recorde.second = numero;  
+          recorde.second = numero_do_intervalo;;  
         }
 
         bool precisou_mais_passos_que_o_limiar = passos > limiar;
