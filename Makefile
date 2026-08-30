@@ -1,7 +1,7 @@
 TARGET = distribuidor_carga
 
 CXX = g++
-CXXFLAGS = -Wall -std=c++17 -O3
+CXXFLAGS = -Wall -std=c++17 -O3 -pthread
 
 SRCS = src/main.cpp src/calcula_sequencia.cpp src/gerador_de_saida.cpp src/relogio.cpp
 
