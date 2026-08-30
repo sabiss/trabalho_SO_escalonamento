@@ -22,4 +22,4 @@ O programa exige a passagem exata de 7 parâmetros via linha de comando, respeit
 
 **Exemplo de Execução (Modo Linear)**
 Para testar o programa em via única (sem divisão de carga), execute:
-`./distribuidor_carga 100039468 8100039468 268 1 linear 1 resultados.csv`
+`./distribuidor_carga 100039468 8100039468 268 1 linear 1 resultado.csv`
