@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <utility>
+
 #include "../include/calcula_sequencia.h"
 #include "../include/gerador_de_saida.h"
 
@@ -24,11 +24,12 @@ int main(int argc, char* argv[]){
     const std::string particao = argv[6];
     const std::string arquivo_saida = argv[7];
 
-    std::pair<ull, ull>recorde = {0,0};
+    ull recorde_numero = 0;//numero que bateu o recorde
+    ull recorde_saltos = 0;//quantidade de passos do número recorde
     ull QTD=0;
 
-    calcula_sequencia(INICIO_INTERVALO, FIM_INTERVALO, recorde, QTD, LIMIAR, tempo_total);
-    gerar_arquivo_saida(arquivo_saida, modo, particao, W, TAMANHO_INTERVALO, tempo_total, tempo_total, tempo_total, 0.0, QTD, recorde);
+    calcula_sequencia(INICIO_INTERVALO, FIM_INTERVALO, recorde_numero, recorde_saltos, QTD, LIMIAR, tempo_total);
+    gerar_arquivo_saida(arquivo_saida, modo, particao, W, TAMANHO_INTERVALO, tempo_total, tempo_total, tempo_total, 0.0, QTD, recorde_numero, recorde_saltos);
     
     return EXIT_SUCCESS;
 }
