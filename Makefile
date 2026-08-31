@@ -1,4 +1,4 @@
-TARGET = distribuidor_carga
+TARGET = varredor
 
 CXX = g++
 CXXFLAGS = -Wall -std=c++17 -O3 -pthread
