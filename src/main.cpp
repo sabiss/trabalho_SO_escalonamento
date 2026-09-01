@@ -21,7 +21,7 @@ int main(int argc, char* argv[]){
     double tempo_total = 0.0;
 
     const std::string modo = argv[5];
-    const std::string particao = argv[6];
+    const std::string particao = argv[6];//vai ser apenas um 1 genérico já que no checkpoint isso ainda não é necessário
     const std::string arquivo_saida = argv[7];
 
     ull recorde_numero = 0;//numero que bateu o recorde
