@@ -22,4 +22,4 @@ O programa exige a passagem exata de 7 parâmetros via linha de comando, respeit
 
 **Exemplo de Execução (Modo Linear)**
 Para testar o programa em via única (sem divisão de carga), execute:
-`./varredor 100039468 8100078936 268 1 linear 1 resultado.csv`
+`./varredor 100039468 8100078936 268 1 linear 1 resultado_meu_intervalo.csv`
