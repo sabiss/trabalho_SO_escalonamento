@@ -1,5 +1,7 @@
-#ifndef GERADOR_ARQUIVO_H
-#define GERADOR_ARQUIVO_H
+#ifndef GERADOR_DE_SAIDA_H
+#define GERADOR_DE_SAIDA_H
+
+#include <string>
 
 using ull = unsigned long long;
 
