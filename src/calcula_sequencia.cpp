@@ -14,7 +14,7 @@ void calcula_sequencia(
     double& tempo_total
 ) {
     Relogio relogio;
-    relogio.iniciar_marcacao_sequencia();
+    relogio.iniciar_marcacao();
 
     for(ull numero_do_intervalo = inicio_intervalo; numero_do_intervalo <= fim_intervalo; numero_do_intervalo++){
         ull numero = numero_do_intervalo;
@@ -42,6 +42,6 @@ void calcula_sequencia(
 
         if(precisou_mais_passos_que_o_limiar)QTD++;
     }
-    relogio.parar_marcacao_sequencia();
+    relogio.parar_marcacao();
     tempo_total = relogio.calcular_tempo_total();
 }
