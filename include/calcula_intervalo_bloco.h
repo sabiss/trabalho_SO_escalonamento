@@ -1,5 +1,5 @@
-#ifndef CALCULA_INTERVALO_H
-#define CALCULA_INTERVALO_H
+#ifndef CALCULA_INTERVALO_BLOCO_H
+#define CALCULA_INTERVALO_BLOCO_H
 
 #include <utility>
 
