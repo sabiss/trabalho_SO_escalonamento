@@ -2,12 +2,12 @@
 #include <iomanip>
 #include <iostream>
 
-using ull = unsigned long long;
+#include "../include/tipos.h"
 
 void gerar_arquivo_saida(
     std::string arquivo_saida, 
-    const int& modo, 
-    const std::string& particao, 
+    const ModoOperacao& modo, 
+    const TipoParticao& particao, 
     const int& W, 
     const ull& TAMANHO_INTERVALO, 
     const double& tempo_total, 
@@ -23,8 +23,8 @@ void gerar_arquivo_saida(
 
     if (arquivo.is_open()) {
         //grava as variáveis
-        arquivo << modo << ","
-                << particao << ","
+        arquivo << static_cast<int>(modo) << ","
+                << static_cast<int>(particao) << ","
                 << W << ","
                 << TAMANHO_INTERVALO << ",";
 
