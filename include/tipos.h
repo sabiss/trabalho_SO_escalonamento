@@ -23,4 +23,12 @@ struct ResultadoWorker {
     double tempo_execucao = 0.0;
 };
 
+struct ArgumentosThreadBloco {
+    int id_worker;
+    ull inicio_intervalo;
+    ull fim_intervalo;
+    ull limiar;
+    ResultadoWorker* relatorio;
+};
+
 #endif
